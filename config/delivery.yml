@@ -31,7 +31,7 @@ spec:
           spring-boot-convention/app-live-view-appflavour-check
         developer.conventions/target-containers: workload
         kubectl.kubernetes.io/last-applied-configuration: |
-          {"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"annotations":{},"labels":{"app.kubernetes.io/part-of":"where-for-dinner-ui","apps.tanzu.vmware.com/has-tests":"true","apps.tanzu.vmware.com/workload-type":"server","networking.knative.dev/visibility":"cluster-local"},"name":"where-for-dinner-ui","namespace":"recycle"},"spec":{"build":{"env":[{"name":"BP_NODE_RUN_SCRIPTS","value":"build"},{"name":"BP_WEB_SERVER_ROOT","value":"dist"}]},"params":[{"name":"gitops_repository","value":"https://github.com/vipinms2/where-for-dinner-ui-recycle"},{"name":"gitops_ssh_secret","value":"git-ssh"},{"name":"ports","value":[{"containerPort":8080,"name":"http","port":80}]}],"resources":{"limits":{"cpu":"1000m","memory":"750M"},"requests":{"cpu":"100m","memory":"500M"}},"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/vipinms2/where-for-dinner-test-mc-longaks3.git"},"subPath":"where-for-dinner-ui"}}}
+          {"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"annotations":{},"labels":{"app.kubernetes.io/part-of":"where-for-dinner-ui","apps.tanzu.vmware.com/has-tests":"true","apps.tanzu.vmware.com/workload-type":"server","networking.knative.dev/visibility":"cluster-local"},"name":"where-for-dinner-ui","namespace":"recycle"},"spec":{"build":{"env":[{"name":"BP_NODE_RUN_SCRIPTS","value":"build"},{"name":"BP_WEB_SERVER_ROOT","value":"dist"}]},"params":[{"name":"gitops_repository","value":"https://github.com/vipinms2/where-for-dinner-ui-recycle"},{"name":"gitops_ssh_secret","value":"git-ssh"},{"name":"ports","value":[{"containerPort":8080,"name":"http","port":80}]}],"resources":{"limits":{"cpu":"1000m","memory":"750M"},"requests":{"cpu":"100m","memory":"500M"}},"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/vipinms2/where-for-dinner-mc-longevityaks93.git"},"subPath":"where-for-dinner-ui"}}}
       labels:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: where-for-dinner-ui
@@ -41,7 +41,7 @@ spec:
         networking.knative.dev/visibility: cluster-local
     spec:
       containers:
-      - image: taplongevity.azurecr.io/tapalong/where-for-dinner-ui-recycle@sha256:328632f0fdd3ab9946d8297afd5b3e1207926c8185d0ff9e01d1b915a2a85eda
+      - image: taplongevity.azurecr.io/tapalong/where-for-dinner-ui-recycle@sha256:00b165b57f465f638ae547d3f17ab70d8fed96a379c0af9bb3c26620fcda98ee
         name: workload
         resources:
           limits:
